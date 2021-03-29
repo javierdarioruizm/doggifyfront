@@ -1,0 +1,64 @@
+<h1>Datos del lugar</h1>
+<form class="formulario" [formGroup]="edicionLugares" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" formControlName="nombre" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" formControlName="direccion" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Población</label>
+        <input type="text" formControlName="poblacion" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Código Postal</label>
+        <input type="text" formControlName="codigo_postal" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Provincia</label>
+        <input type="text" formControlName="provincia" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>País</label>
+        <input type="text" formControlName="pais" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Latitud</label>
+        <input type="text" formControlName="latitud" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Longitud</label>
+        <input type="text" formControlName="longitud" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Categoría</label>
+        <input type="text" formControlName="categoria" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Descripción</label>
+        <textarea formControlName="descripcion" rows="3" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label>Horario</label>
+        <input type="text" formControlName="horario" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Teléfono</label>
+        <input type="text" formControlName="telefono" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Sitio Web</label>
+        <input type="text" formControlName="sitio_web" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Imagen</label>
+        <input type="file" formControlName="imagenes" (change)="onChange($event)" class="form-control">
+    </div>
+    <input type="submit" value="Enviar" class="btn btn-info btn-block">
+</form>

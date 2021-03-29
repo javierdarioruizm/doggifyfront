@@ -1,0 +1,26 @@
+h1{
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.formulario {
+    width: 50%;
+    margin: 20px auto 30px auto;
+    border: 1px rgb(226, 225, 225) solid;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px lightgrey;
+    
+}
+
+input::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+.registro {
+    text-align:center;
+    margin: 30px auto 0px auto;
+    border-top: 1px silver solid;
+    padding-top: 20px;
+}

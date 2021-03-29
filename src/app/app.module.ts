@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewlugarComponent } from './components/complugares/newlugar/newlugar.component';
+import { EditlugarComponent } from './components/complugares/editlugar/editlugar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { NewlugarComponent } from './components/complugares/newlugar/newlugar.co
     LugaresComponent,
     FooterComponent,
     HomeComponent,
-    NewlugarComponent
+    NewlugarComponent,
+    EditlugarComponent
   ],
   imports: [
     BrowserModule,
