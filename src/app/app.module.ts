@@ -25,6 +25,7 @@ import { NewComponent } from './components/compusuarios/new/new.component';
 import { LoginComponent } from './components/compusuarios/login/login.component';
 import { PerfilComponent } from './components/compusuarios/perfil/perfil.component';
 import { FavoritosComponent } from './components/compusuarios/favoritos/favoritos.component';
+import { ComentariosComponent } from './components/compusuarios/comentarios/comentarios.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FavoritosComponent } from './components/compusuarios/favoritos/favorito
     NewComponent,
     LoginComponent,
     PerfilComponent,
-    FavoritosComponent
+    FavoritosComponent,
+    ComentariosComponent
   ],
   imports: [
     BrowserModule,

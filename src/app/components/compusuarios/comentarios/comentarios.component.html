@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="col-10 col-md-8 col-lg-6 col-xl-5 comentario">
+        <div class="lugar">
+            <div class="row">
+                <div class="col-4">
+                    <!-- <img [src]="'http://localhost:3000/images/'+listaImagenes[0]"> -->
+                    <!-- [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+listaImagenes[imagenActual]+')'}" -->
+                </div>
+                <div class="col-8 titulo">
+                    <h2> {{ lugar?.nombre }}</h2>
+                    <p> {{ lugar?.direccion }}, {{ lugar?.codigo_postal }} {{ lugar?.poblacion }}</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- <div class="galeria" *ngIf="listaImagenes && listaImagenes.length > 0"
+        [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+listaImagenes[0]+')'}">
+         <fa-icon [icon]="faChevronLeft" class="flechaizquierda" (click)="onClick(false)"></fa-icon>
+        <fa-icon [icon]="faChevronRight" class="flechaderecha" (click)="onClick(true)"></fa-icon> 
+
+
+</div> -->
+
+        <h3>Tu experiencia es muy valiosa</h3>
+
+
+
+        <form class="formulario" [formGroup]="formComentarios" (ngSubmit)="onSubmit()">
+
+            <div class="form-group">
+                <label>Tu valoración (entre 1 y 5 <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>)</label>
+                <select formControlName="valoracion" class="form-control" id="exampleFormControlSelect1">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Tu opinión</label>
+                <textarea formControlName="comentario" rows="4" class="form-control"></textarea>
+            </div>
+
+
+            <input type="submit" value="Enviar" class="btn btn-primary btn-block">
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,191 @@
+.comentario{
+    
+    margin: 20px auto 150px auto;
+ 
+}
+
+h1{
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+    font-size: 1.8em;
+}
+
+.foto {
+    width:100%;
+}
+
+.formulario {
+    width: 100%;
+    margin: 20px auto 150px auto;
+    border: 1px rgb(226, 225, 225) solid;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 8px lightgrey;
+    background-color: white;
+    
+}
+
+input::placeholder {
+    color: rgb(180, 180, 180);
+}
+
+.registro {
+    text-align:center;
+    margin: 30px auto 0px auto;
+    border-top: 1px silver solid;
+    padding-top: 20px;
+}
+
+.fa-star {
+   
+    color: tomato;
+    
+}
+
+
+.lugar {
+    margin: 30px auto;
+    text-align: left;
+    width: 100%;
+}
+
+/* .lugar .titulo {
+    margin: 0 auto;
+} */
+
+
+.lugar .info {
+    margin: 0 auto;
+}
+
+.lugar .info p {
+    margin: 20px auto;
+}
+
+.lugar p {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.5em;
+}
+
+.lugar img {
+    width: 50%;
+}
+
+
+
+.cabeceravaloraciones {
+    margin: 0 auto;
+    margin-top:30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.cabeceravaloraciones h4 {
+     
+    font-size: 20px;
+    color: grey;
+    margin-left: 10px;
+    margin-top:5px;
+    
+}
+
+
+
+
+.icon {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 15px;
+    
+}
+
+.favorito {
+    color: tomato;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+
+
+.galeria {
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    position: relative;
+    transition: all 1s;
+    
+    
+}
+
+.galeria .flechaizquierda, .flechaderecha {
+    position: absolute;
+    top: 180px;
+    left: 25px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.5s;
+    
+}
+
+.galeria .flechaderecha {
+    left: 575px;
+}
+
+.galeria .flechaizquierda:hover {
+    opacity: 1;
+}
+
+.galeria .flechaderecha:hover {
+    opacity: 1;
+}
+
+
+
+.botoncorazon {
+    
+    margin: 0 auto;    
+    background-color: white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    text-align:center;
+    cursor:pointer;
+    
+  
+}
+
+.botoncorazon:hover {
+       
+    background-color: rgb(245, 244, 244);
+   
+}
+
+.corazon{
+    padding-top: 15px;
+    color:red;
+    font-size: 25px;
+    z-index: 10;
+    cursor:pointer;
+}
+
+.btn {
+    font-weight: bold;
+}
+
+h3 {
+    margin: 20px auto;
+    text-align:center;
+}
+
+
+
