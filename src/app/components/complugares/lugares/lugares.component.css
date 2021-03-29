@@ -1,0 +1,217 @@
+
+.contenedor {
+    margin: 20px auto 0px auto;
+    width: 100%;
+            
+}  
+
+.lugares {
+    background-color: white;
+    padding: 0px;
+    margin: 0px;
+       
+}
+
+.buscador {
+    text-align:center;
+    margin: 0 15px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.lugar{
+    margin: 0 15px;
+    padding: 15px 20px 15px 0px;
+    border-bottom: 1px solid lightgrey;
+    text-align: left;
+    cursor: pointer;
+    
+    z-index: 0;
+}
+
+
+.lugar .imagen {
+    
+    padding: 0px;
+    margin: 0px;
+}
+
+
+.lugar .imagen img {
+    width: 100%;
+}
+
+
+.lugar .texto {
+    background-color: white;
+   
+}
+
+.lugar h3 {
+    font-size: 20px;
+    padding-top: 10px;
+    width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.lugar  p {
+    font-size: 16px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 25px;
+    text-align: left;
+    width: 300px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+ }
+
+ .lugar .estrellas {
+    
+   margin-top: 30px;
+    color: tomato;
+}
+
+
+
+.paginacion {
+    margin: 20px auto;
+    text-align:center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.paginacion ul {
+    margin: 20px auto;
+    text-align:center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+.paginacion ul li {
+    width:45px;
+    height: 45px;
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 0px 10px 0px;
+    background-color: white;
+    border: 1px silver solid;
+    border-style: solid none solid solid;
+    margin: 0px;
+    cursor: pointer;
+    
+}
+
+.paginacion ul li:last-child{
+    border-style: solid solid solid solid;
+} 
+
+.paginacion ul li:hover {
+    background-color: #eeecec;
+    
+}
+
+.paginacion ul li.activa {
+    background-color: #2c1366;
+    color: white;
+}
+
+
+
+.mapa {
+    background-color: white;
+    height: 620px;
+    position: sticky;
+    top: 10px;    
+    overflow: hidden;
+}
+
+agm-map {
+    height: 620px;
+       
+}
+
+
+.imagenmapa {
+    width:150px;
+    padding:0px;
+}
+
+
+.galeria {
+   
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    transition: all 1s;    
+    
+}
+
+.galeria .flechaizquierda, .flechaderecha {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.5s;
+  
+    
+}
+
+.galeria .flechaderecha {
+    left: 88%;
+}
+
+.galeria .flechaizquierda:hover {
+    opacity: 1;
+}
+
+.galeria .flechaderecha:hover {
+    opacity: 1;
+}
+
+.botoncorazon {
+    padding-top: 5px;
+    margin: 0px;    
+    background-color: white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    text-align:center;
+    cursor:pointer;
+    
+  
+}
+
+.botoncorazon:hover {
+       
+    background-color: rgb(245, 244, 244);
+   
+}
+
+.corazon{
+    padding-top: 5px;
+    color:red;
+    font-size: 25px;
+    z-index: 10;
+    cursor:pointer;
+}
+
+button {
+    float: right;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 20px;
+    
+}
