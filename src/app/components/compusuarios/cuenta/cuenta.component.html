@@ -1,0 +1,33 @@
+<div class="container">
+    <h1>¡Hola {{usuario?.nombre}}!</h1>
+    <div class="col-10 col-md-8 col-lg-6 col-xl-5 cuenta">
+
+
+        <ul>
+            <li>
+                <h3>
+                    <i class="fas fa-user-alt" aria-hidden="true"></i><a (click)="onClickMiPerfil()" class="enlace">Mi
+                        perfil</a>
+                </h3>
+            </li>
+            <li>
+                <h3>
+                    <fa-icon [icon]="farHeart" class="icon"></fa-icon><a (click)="onClickFavoritos()"
+                        class="enlace">Lugares favoritos</a>
+                </h3>
+            </li>
+            <li>
+                <h3><i class="fas fa-sliders-h" aria-hidden="true"></i><a (click)="onClickAjustes()"
+                        class="enlace">Ajustes</a></h3>
+            </li>
+            <li>
+                <h3>
+                    <fa-icon [icon]="faSignOutAlt" class="icon"></fa-icon><a (click)="onClickLogOut()"
+                        class="enlace">Cerrar sesión</a>
+                </h3>
+            </li>
+        </ul>
+
+
+    </div>
+</div>

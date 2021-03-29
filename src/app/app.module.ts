@@ -20,6 +20,7 @@ import { VistalugarComponent } from './components/complugares/vistalugar/vistalu
 import { ValoracionesComponent } from './components/complugares/valoraciones/valoraciones.component';
 import { ValoracionmediaComponent } from './components/complugares/valoracionmedia/valoracionmedia.component';
 import { HeaderuserComponent } from './components/compusuarios/headeruser/headeruser.component';
+import { CuentaComponent } from './components/compusuarios/cuenta/cuenta.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { HeaderuserComponent } from './components/compusuarios/headeruser/header
     VistalugarComponent,
     ValoracionesComponent,
     ValoracionmediaComponent,
-    HeaderuserComponent
+    HeaderuserComponent,
+    CuentaComponent
   ],
   imports: [
     BrowserModule,
