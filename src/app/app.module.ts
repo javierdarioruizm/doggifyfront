@@ -23,6 +23,7 @@ import { HeaderuserComponent } from './components/compusuarios/headeruser/header
 import { CuentaComponent } from './components/compusuarios/cuenta/cuenta.component';
 import { NewComponent } from './components/compusuarios/new/new.component';
 import { LoginComponent } from './components/compusuarios/login/login.component';
+import { PerfilComponent } from './components/compusuarios/perfil/perfil.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { LoginComponent } from './components/compusuarios/login/login.component'
     HeaderuserComponent,
     CuentaComponent,
     NewComponent,
-    LoginComponent
+    LoginComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
