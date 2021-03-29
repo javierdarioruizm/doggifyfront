@@ -15,6 +15,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { NewlugarComponent } from './components/complugares/newlugar/newlugar.component';
 import { EditlugarComponent } from './components/complugares/editlugar/editlugar.component';
+import { MapalugarComponent } from './components/complugares/mapalugar/mapalugar.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { EditlugarComponent } from './components/complugares/editlugar/editlugar
     FooterComponent,
     HomeComponent,
     NewlugarComponent,
-    EditlugarComponent
+    EditlugarComponent,
+    MapalugarComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+<agm-map [latitude]="lugar?.latitud" [longitude]="lugar?.longitud" [zoom]="17" [fitBounds]="false">
+
+    <agm-marker [latitude]="lugar?.latitud" [longitude]="lugar?.longitud" [agmFitBounds]="true">
+
+        <agm-snazzy-info-window [closeWhenOthersOpen]="true">
+            <ng-template>
+                <a [routerLink]="['/lugares', lugar.id]">
+                    <img [src]="lugar.arrimagenes[0]">
+                    <p>{{ lugar.nombre }}</p>
+                </a>
+            </ng-template>
+
+        </agm-snazzy-info-window>
+
+        <!-- [iconUrl]="{url:'../../../../assets/images/iconodoggify2.png', scaledSize: {width:35, height:35}}" -->
+
+    </agm-marker>
+</agm-map>
