@@ -7,8 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
-import { Imagen } from 'src/app/interfaces/imagen.interface';
-import { GaleriaService } from 'src/app/services/galeria.service';
+// import { GaleriaService } from 'src/app/services/galeria.service';
 import { FavoritosService } from 'src/app/services/favoritos.service';
 
 @Component({
@@ -44,7 +43,7 @@ export class LugaresComponent implements OnInit {
   constructor(
     private lugaresService: LugaresService,
     private favoritosService: FavoritosService,
-    private galeriaService: GaleriaService,
+    // private galeriaService: GaleriaService,
     private router: Router,
     private activatedRoute: ActivatedRoute
   ) {

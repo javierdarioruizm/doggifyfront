@@ -118,12 +118,12 @@ img {
 }
 
  .navbar-toggler-icon {
-    background-image: url(../../../../assets/images/bars-solid.svg);
+    background-image: url(../../../assets/images/bars-solid.svg);
   
 } 
 
 .aspa {
-    background-image: url(../../../../assets/images/times-solid.svg);
+    background-image: url(../../../assets/images/times-solid.svg);
 }
 
 
