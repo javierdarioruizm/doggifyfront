@@ -1,0 +1,53 @@
+<div class="valoraciones" *ngIf="valoraciones && valoraciones.length > 0">
+    <!-- <h2>{{valoraciones.length}} valoraciones</h2> -->
+    <div class="valoracion" *ngFor="let valoracion of valoraciones">
+        <!-- <i class="fas faUserCircle"></i> -->
+        <div class="cabecera">
+            <fa-icon [icon]="faUserCircle" [ngClass]="'avatar'"></fa-icon>
+            <div class="usuario">
+                <h3>{{ valoracion.nombre }}</h3>
+                <p class="fecha">{{ valoracion.fecha | date:'dd/MM/yyyy' }}</p>
+                <div class="estrellas">
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="valoracion.estrellas==5 || valoracion.estrellas==4 || valoracion.estrellas==3  || valoracion.estrellas==2 || valoracion.estrellas==1">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="valoracion.estrellas==5 || valoracion.estrellas==4 || valoracion.estrellas==3  || valoracion.estrellas==2">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="valoracion.estrellas==5 || valoracion.estrellas==4 || valoracion.estrellas==3">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star" *ngIf="valoracion.estrellas==5 || valoracion.estrellas==4">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star" *ngIf="valoracion.estrellas==5"></fa-icon>
+                    <fa-icon [icon]="farStar" class="star"
+                        *ngIf="valoracion.estrellas==4 || valoracion.estrellas==3 || valoracion.estrellas==2 || valoracion.estrellas==1">
+                    </fa-icon>
+                    <fa-icon [icon]="farStar" class="star"
+                        *ngIf="valoracion.estrellas==3 || valoracion.estrellas==2 || valoracion.estrellas==1">
+                    </fa-icon>
+                    <fa-icon [icon]="farStar" class="star" *ngIf="valoracion.estrellas==2 || valoracion.estrellas==1">
+                    </fa-icon>
+                    <fa-icon [icon]="farStar" class="star" *ngIf="valoracion.estrellas==1 "></fa-icon>
+                </div>
+
+            </div>
+        </div>
+        <div class="comentario">
+            <p>{{ valoracion.comentario }}</p>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="paginacion" *ngIf="arrayPaginas[1]">
+
+    <ul>
+        <li *ngFor="let pagina of arrayPaginas" (click)="changePage(pagina)"
+            [ngClass]="{activa: (pagina === paginaSeleccionada)}">
+            {{pagina}}
+        </li>
+    </ul>

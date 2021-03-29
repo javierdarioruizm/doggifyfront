@@ -1,0 +1,113 @@
+h2 {
+    text-align: left;
+    font-size: 25px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+.valoraciones {
+    margin: 20px auto;
+    width: 100%; 
+    
+}
+    
+
+.valoracion {
+    margin: 20px 0;
+    border-top: 1px solid lightgrey;
+    text-align: left;
+    height: auto;
+       
+}
+
+.valoracion p {
+    font-size: 20px;
+}
+
+.valoracion:last-child {
+    border-bottom: 1px solid lightgrey;
+}
+
+.valoracion .cabecera {
+    /* margin-top: 20px; */
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+.valoracion .usuario {
+     margin-top: 15px;
+    display:inline-block; 
+    
+}
+.avatar {
+    font-size: 70px;
+    color: silver;
+    margin-top: 0px;
+    margin-right: 30px;
+}
+
+.fecha {
+    color: grey;
+    margin-top: 0px;
+}
+
+.estrellas {
+    margin-top: -10px;
+    color: tomato;
+    
+}
+
+.comentario {
+    margin-top: 20px;
+}
+
+
+.paginacion {
+    margin: 20px auto;
+    text-align:center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.paginacion ul {
+    margin: 20px auto;
+    text-align:center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+.paginacion ul li {
+    width:45px;
+    height: 45px;
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 0px 10px 0px;
+    background-color: white;
+    border: 1px silver solid;
+    border-style: solid none solid solid;
+    margin: 0px;
+    cursor: pointer;
+    
+}
+
+.paginacion ul li:last-child{
+    border-style: solid solid solid solid;
+} 
+
+.paginacion ul li:hover {
+    background-color: #eeecec;
+    
+}
+
+.paginacion ul li.activa {
+    background-color: #2c1366;
+    color: white;
+}
+
+
+
