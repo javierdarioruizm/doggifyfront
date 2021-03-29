@@ -1,0 +1,26 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+
+
+footer {
+    background-color: black;
+    padding: 15px 0px;
+    color: white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+
+footer  a {
+    color: white;
+    text-decoration:none;
+}
+
+footer  a:hover {
+    color: orange;
+  
+}

@@ -11,12 +11,14 @@ import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LugaresComponent
+    LugaresComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
