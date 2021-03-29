@@ -1,27 +1,62 @@
 <header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" [routerLink]="['/home']">
             <img class="logo" src="../../../assets/images/logoDoggify.png" alt="logo">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <!-- <button (click)="onClick()" class="navbar-toggler" type="button" aria-label="Toggle navigation"
+            data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"> -->
+
+
+        <button (click)="onClick()" class="navbar-toggler" type="button" aria-label="Toggle navigation"
+            data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+
+            <!-- <fa-icon [icon]="faBars" [ngClass]="{ 'faTimes': (icono === 'clicked')}"></fa-icon> -->
+            <i class="fas fa-bars" [ngClass]="{ 'fa-times': (icono === 'clicked')}"></i>
+
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inicio</a>
+
+        <!-- <div class="navbar-collapse collapse" id="navbarNav" [ngClass]="{show: menu}"> -->
+
+        <div class="navbar-collapse collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a (click)="onClickEnlace()" class="nav-link" [routerLink]="['/home']" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Lugares</a>
+                    <a (click)="onClickEnlace()" class="nav-link" [routerLink]="['/lugares']" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">Lugares</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="#">Categorías</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blog</a>
                 </li>
 
+                <li class="nav-item">
+                    <a (click)="onClickEnlace()" class="nav-link" [routerLink]="['/registro']" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+
+                        <fa-icon [icon]="faUserCircle" class="far icon"></fa-icon>
+
+                        Regístrate
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a (click)="onClickEnlace()" class="nav-link btninisesion" [routerLink]="['/login']"
+                        data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                        aria-expanded="false">Inicia
+                        sesión</a>
+                </li>
+
+
             </ul>
+
         </div>
     </nav>
+
+
 
 </header>
