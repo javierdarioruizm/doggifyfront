@@ -16,6 +16,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NewlugarComponent } from './components/complugares/newlugar/newlugar.component';
 import { EditlugarComponent } from './components/complugares/editlugar/editlugar.component';
 import { MapalugarComponent } from './components/complugares/mapalugar/mapalugar.component';
+import { VistalugarComponent } from './components/complugares/vistalugar/vistalugar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { MapalugarComponent } from './components/complugares/mapalugar/mapalugar
     HomeComponent,
     NewlugarComponent,
     EditlugarComponent,
-    MapalugarComponent
+    MapalugarComponent,
+    VistalugarComponent
   ],
   imports: [
     BrowserModule,

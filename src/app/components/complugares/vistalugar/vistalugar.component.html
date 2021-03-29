@@ -1,0 +1,89 @@
+<div class="lugar container">
+    <div class="row">
+        <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-xl-6 offset-xl-3 ">
+            <div class="row">
+                <div class="col-10 titulo">
+                    <h2> {{ lugar?.nombre }}</h2>
+                    <p> {{ lugar?.direccion }}, {{ lugar?.codigo_postal }} {{ lugar?.poblacion }}</p>
+                </div>
+                <div class="col-1 corazon">
+                    <div title="Guardar en favoritos" class="botoncorazon" (click)="onHeart(lugar?.id)">
+                        <i class="far fa-heart corazon" [ngClass]="{'fas': lugar.favorito == true}"></i>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="galeria" *ngIf="listaImagenes && listaImagenes.length > 0">
+
+                <img [src]="'http://localhost:3000/images/'+listaImagenes[imagenActual]">
+
+                <fa-icon [icon]="faChevronLeft" class="flechaizquierda" (click)="onClick(false)"></fa-icon>
+                <fa-icon [icon]="faChevronRight" class="flechaderecha" (click)="onClick(true)"></fa-icon>
+            </div>
+
+            <div class="info">
+
+                <h3>Información</h3>
+                <p> {{ lugar?.descripcion }}</p>
+                <h3>Horario</h3>
+                <p> {{ lugar?.horario }}</p>
+                <h3>Ubicación</h3>
+                <div class="contacto">
+                    <div>
+                        <fa-icon [icon]="faMapMarkerAlt" class="icon"></fa-icon>
+                    </div>
+                    <div>
+                        <p> {{ lugar?.direccion }}, {{ lugar?.codigo_postal }} {{ lugar?.poblacion }}</p>
+                    </div>
+                </div>
+                <h3>Contacto</h3>
+                <div class="contacto">
+                    <div>
+                        <fa-icon [icon]="faPhoneAlt" class="icon"></fa-icon>
+                    </div>
+                    <div>
+                        <p><a title="llamar" [href]="'tel:+34'+lugar?.telefono">{{ lugar?.telefono }}</a></p>
+                    </div>
+                </div>
+                <div class="contacto">
+                    <div>
+                        <fa-icon [icon]="faEnvelope" class="icon"></fa-icon>
+                    </div>
+                    <div>
+                        <p>{{ lugar?.email }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Mapa</h3>
+            <div class="mapalugar">
+                <app-mapalugar></app-mapalugar>
+            </div>
+
+
+
+            <h3>Puntuaciones y opiniones</h3>
+            <div class="row cabeceravaloraciones">
+                <div class="col-6 col-sm-6 col-md-6 col-xl-6 valoracion">
+                    <app-valoracionmedia *ngIf="lugar?.numero_valoraciones>0"></app-valoracionmedia>
+
+                    <div [ngSwitch]="lugar?.numero_valoraciones">
+                        <h4 *ngSwitchCase="0">No hay valoraciones</h4>
+                        <h4 *ngSwitchCase="1">({{lugar?.numero_valoraciones}} valoración)</h4>
+                        <h4 *ngSwitchDefault>({{lugar?.numero_valoraciones}} valoraciones)</h4>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-6 col-md-6 col-xl-6">
+                    <button type="button" class="btn btn-dark" (click)="OnComentarios(lugar?.id)">Escribe una
+                        opinión</button>
+                </div>
+
+            </div>
+
+            <app-valoraciones></app-valoraciones>
+
+        </div>
+    </div>

@@ -1,0 +1,211 @@
+
+
+.lugar {
+    margin: 30px auto;
+    text-align: left;
+    width: 100%;
+}
+
+
+.lugar .info {
+    margin: 0 auto;
+}
+
+.lugar .info p {
+    margin: 20px auto;
+}
+
+.lugar p {
+    font-size: 20px;
+    margin: 0px;
+    padding: 0px;
+    line-height: 1.5em;
+}
+
+.lugar img {
+    width: 100%;
+}
+
+ .mapalugar {
+  
+    width: 100%;
+    margin: 30px 0;
+} 
+
+h3{
+    
+    margin-top: 40px;
+} 
+
+
+.cabeceravaloraciones {
+    margin: 40px auto;
+    text-align: center;
+  
+}
+
+
+.cabeceravaloraciones h4 {
+     
+    font-size: 20px;
+    color: grey;
+    margin-left: 0px;
+    margin-top:5px;
+    
+}
+
+
+
+.contacto {
+   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+    align-items: center; 
+}
+
+
+.icon {
+    font-size: 30px;
+    margin-right: 20px;
+    margin-top: 15px;
+    
+}
+
+.favorito {
+    color: tomato;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+.paginacion {
+    margin: 20px auto;
+    text-align:center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.paginacion ul {
+    margin: 20px auto;
+    text-align:center;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+.paginacion ul li {
+    width:45px;
+    height: 45px;
+    list-style: none;
+    font-size: 20px;
+    padding: 5px 0px 10px 0px;
+    background-color: white;
+    border: 1px silver solid;
+    border-style: solid none solid solid;
+    margin: 0px;
+    cursor: pointer;
+    
+}
+
+.paginacion ul li:last-child{
+    border-style: solid solid solid solid;
+} 
+
+.paginacion ul li:hover {
+    background-color: #eeecec;
+    
+}
+
+.paginacion ul li.activa {
+    background-color: #2c1366;
+    color: white;
+}
+
+
+.galeria {
+   
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+    transition: all 1s;
+    
+    
+}
+
+.galeria .flechaizquierda, .flechaderecha {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all 0.5s;
+    
+}
+
+.galeria .flechaderecha {
+    left: 90%;
+}
+
+.galeria .flechaizquierda:hover {
+    opacity: 1;
+}
+
+.galeria .flechaderecha:hover {
+    opacity: 1;
+}
+
+.valoracion {
+    text-align:left ;
+}
+
+.cabeceratitulo {
+    position: relative;
+}
+
+.botoncorazon {
+    position: absolute;
+    right: 5px;
+    top: 0px;    
+    background-color: white;
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+    text-align:center;
+    cursor:pointer;
+   
+  
+}
+
+.botoncorazon:hover {
+       
+    background-color: rgb(245, 244, 244);
+   
+}
+
+.corazon{
+   position: absolute;
+   right: 12px;
+   top: 12px;    
+    color:red;
+    font-size: 25px;
+    z-index: 10;
+    cursor:pointer;
+}
+
+button {
+    float: right;
+}
+
+.btn {
+    font-weight: bold;
+    font-size: 20px;
+    
+}
