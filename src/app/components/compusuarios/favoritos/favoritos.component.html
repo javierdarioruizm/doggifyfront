@@ -1,0 +1,95 @@
+<div class="row contenedor">
+
+    <div class="col-12 col-sm-12 col-md-6 lugares">
+
+        <div class="buscador">
+            <select (change)="onChange($event)">
+                <option value="todas">Todos</option>
+                <option *ngFor="let categoriaelegida of listaCategorias" [value]="categoriaelegida.categoria">
+                    {{categoriaelegida.categoria}}</option>
+            </select>
+        </div>
+
+        <div class="row lugar" *ngFor="let lugar of lugares" (click)="getLugar(lugar.id)">
+
+            <div class="col-12 col-sm-6  col-md-12 col-lg-6 imagen">
+                <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[0]">
+            </div>
+            <div class="col-10 col-sm-5  col-md-10 col-lg-5 texto">
+                <h3> {{ lugar.nombre }} </h3>
+                <p> {{ lugar.direccion}} </p>
+                <p> {{ lugar.codigo_postal}} {{ lugar.poblacion}} </p>
+
+                <div class="estrellas">
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4 || lugar?.valoracion_media==3  || lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4 || lugar?.valoracion_media==3  || lugar?.valoracion_media==2">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4 || lugar?.valoracion_media==3">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star"
+                        *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4">
+                    </fa-icon>
+                    <fa-icon [icon]="faStar" class="star" *ngIf="lugar?.valoracion_media==5"></fa-icon>
+                    <fa-icon [icon]="farStar" class="star"
+                        *ngIf="lugar?.valoracion_media==4 || lugar?.valoracion_media==3 || lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+                    </fa-icon>
+                    <fa-icon [icon]="farStar" class="star"
+                        *ngIf="lugar?.valoracion_media==3 || lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+                    </fa-icon>
+                    <fa-icon [icon]="farStar" class="star"
+                        *ngIf="lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+                    </fa-icon>
+                    <fa-icon [icon]="farStar" class="star" *ngIf="lugar?.valoracion_media==1 "></fa-icon>
+                </div>
+            </div>
+            <div class="col-1 corazon">
+                <!-- <app-corazon></app-corazon> -->
+
+                <div title="Guardar en favoritos" class="botoncorazon" (click)="onHeart(lugar?.id)">
+                    <i class="fas fa-heart corazon" [ngClass]="{'far': (corazon === 'clicked')}"></i>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="paginacion" *ngIf="arrayPaginas[1]">
+            <ul>
+                <li *ngFor="let pagina of arrayPaginas" (click)="changePage(pagina)"
+                    [ngClass]="{activa: (pagina === paginaseleccionada)}">
+                    {{pagina}}
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="col-12 col-sm-12 col-md-6 mapa">
+
+        <agm-map [latitude]="latitud" [longitude]="longitud" [zoom]="13" [fitBounds]="true">
+
+            <agm-marker *ngFor="let lugar of lugares" [latitude]="lugar.latitud" [longitude]="lugar.longitud"
+                [agmFitBounds]="true">
+
+                <agm-snazzy-info-window [closeWhenOthersOpen]="true">
+                    <ng-template>
+                        <a [routerLink]="['/lugares', lugar.id]">
+                            <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[0]" class="imagenmapa">
+                            <p>{{ lugar.nombre }}</p>
+                        </a>
+                    </ng-template>
+
+                </agm-snazzy-info-window>
+
+            </agm-marker>
+
+        </agm-map>
+
+    </div>
+
+</div>
