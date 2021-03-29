@@ -1,0 +1,66 @@
+img {
+    width: 100%;
+}
+
+main {
+    max-width: 1300px;
+    width: 100%;
+    margin: 30px auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  
+}
+
+
+@media (max-width: 400px) {
+    .hero {
+        background-image: url("../../../assets/images/hero-doggify.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 60% 50%;
+        background-color: rgb(175, 175, 175);
+        background-blend-mode: multiply;
+        height: auto;
+        z-index: -1;
+    }
+  }
+
+@media (min-width: 401px) {
+    .hero {
+        background-image: url("../../../assets/images/hero-doggify.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 60% 50%;
+        background-color: rgb(175, 175, 175);
+        background-blend-mode: multiply;
+        height: auto;
+        z-index: -1;
+    }
+  }
+
+  @media (min-width: 769px) {
+  
+    .hero {
+        background-image: url("../../../assets/images/hero-doggify.png");
+        background-size: cover;
+        background-position: center;
+        background-color: rgb(175, 175, 175);
+        background-blend-mode: multiply;
+        height: 580px;
+        z-index: -1;
+    }
+
+  }
+
+
+h1 {
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    padding-top: 400px;
+    padding-left: 100px;
+    text-shadow: rgb(92, 92, 92);
+    position: relative;
+    text-shadow: 2px 2px 8px rgb(54, 54, 54);
+
+}
