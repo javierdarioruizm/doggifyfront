@@ -1,0 +1,37 @@
+.valoracionmedia {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    text-align:left; 
+ }
+ 
+ .puntuacion {
+    /* margin: -10px 10px 0px 0px;  */
+    margin-left: 35px;  
+    background-color: #2c1366;
+    border-radius: 50px;
+    color: white;
+    height: 60px;
+    width: 60px;
+    text-align:center;
+    
+}
+
+.puntuacion h3 {
+   
+    padding-top: 12px; 
+    color: white;
+    text-align:center;
+    
+
+}
+
+
+ .estrellas {
+    margin-top: 0px;
+    font-size: 22px;
+    color: tomato;
+    
+    
+}

@@ -1,0 +1,28 @@
+<div class="valoracionmedia">
+    <div class="puntuacion">
+        <h3>{{lugar?.puntuacion}}</h3>
+    </div>
+    <div class="estrellas">
+        <fa-icon [icon]="faStar" class="star"
+            *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4 || lugar?.valoracion_media==3  || lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+        </fa-icon>
+        <fa-icon [icon]="faStar" class="star"
+            *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4 || lugar?.valoracion_media==3  || lugar?.valoracion_media==2">
+        </fa-icon>
+        <fa-icon [icon]="faStar" class="star"
+            *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4 || lugar?.valoracion_media==3">
+        </fa-icon>
+        <fa-icon [icon]="faStar" class="star" *ngIf="lugar?.valoracion_media==5 || lugar?.valoracion_media==4">
+        </fa-icon>
+        <fa-icon [icon]="faStar" class="star" *ngIf="lugar?.valoracion_media==5"></fa-icon>
+        <fa-icon [icon]="farStar" class="star"
+            *ngIf="lugar?.valoracion_media==4 || lugar?.valoracion_media==3 || lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+        </fa-icon>
+        <fa-icon [icon]="farStar" class="star"
+            *ngIf="lugar?.valoracion_media==3 || lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+        </fa-icon>
+        <fa-icon [icon]="farStar" class="star" *ngIf="lugar?.valoracion_media==2 || lugar?.valoracion_media==1">
+        </fa-icon>
+        <fa-icon [icon]="farStar" class="star" *ngIf="lugar?.valoracion_media==1 "></fa-icon>
+    </div>
+</div>

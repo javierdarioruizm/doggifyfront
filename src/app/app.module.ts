@@ -18,6 +18,7 @@ import { EditlugarComponent } from './components/complugares/editlugar/editlugar
 import { MapalugarComponent } from './components/complugares/mapalugar/mapalugar.component';
 import { VistalugarComponent } from './components/complugares/vistalugar/vistalugar.component';
 import { ValoracionesComponent } from './components/complugares/valoraciones/valoraciones.component';
+import { ValoracionmediaComponent } from './components/complugares/valoracionmedia/valoracionmedia.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ValoracionesComponent } from './components/complugares/valoraciones/val
     EditlugarComponent,
     MapalugarComponent,
     VistalugarComponent,
-    ValoracionesComponent
+    ValoracionesComponent,
+    ValoracionmediaComponent
   ],
   imports: [
     BrowserModule,
