@@ -1,2 +1,4 @@
-<app-header></app-header>
+<app-header *ngIf="login == false"></app-header>
+<app-headeruser *ngIf="login == true"></app-headeruser>
 <router-outlet></router-outlet>
+<app-footer></app-footer>
