@@ -14,6 +14,7 @@ import { NewComponent } from './components/compusuarios/new/new.component';
 import { PerfilComponent } from './components/compusuarios/perfil/perfil.component';
 import { HeaderuserComponent } from './components/headeruser/headeruser.component';
 import { HomeComponent } from './components/home/home.component';
+import { LoginGuard } from './guards/login.guard';
 
 const routes: Routes = [
 
