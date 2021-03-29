@@ -21,6 +21,7 @@ import { ValoracionesComponent } from './components/complugares/valoraciones/val
 import { ValoracionmediaComponent } from './components/complugares/valoracionmedia/valoracionmedia.component';
 import { HeaderuserComponent } from './components/compusuarios/headeruser/headeruser.component';
 import { CuentaComponent } from './components/compusuarios/cuenta/cuenta.component';
+import { NewComponent } from './components/compusuarios/new/new.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { CuentaComponent } from './components/compusuarios/cuenta/cuenta.compone
     ValoracionesComponent,
     ValoracionmediaComponent,
     HeaderuserComponent,
-    CuentaComponent
+    CuentaComponent,
+    NewComponent
   ],
   imports: [
     BrowserModule,
