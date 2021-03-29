@@ -19,6 +19,7 @@ import { MapalugarComponent } from './components/complugares/mapalugar/mapalugar
 import { VistalugarComponent } from './components/complugares/vistalugar/vistalugar.component';
 import { ValoracionesComponent } from './components/complugares/valoraciones/valoraciones.component';
 import { ValoracionmediaComponent } from './components/complugares/valoracionmedia/valoracionmedia.component';
+import { HeaderuserComponent } from './components/compusuarios/headeruser/headeruser.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ValoracionmediaComponent } from './components/complugares/valoracionmed
     MapalugarComponent,
     VistalugarComponent,
     ValoracionesComponent,
-    ValoracionmediaComponent
+    ValoracionmediaComponent,
+    HeaderuserComponent
   ],
   imports: [
     BrowserModule,
