@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
+import { NewlugarComponent } from './components/complugares/newlugar/newlugar.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './components/home/home.component';
     HeaderComponent,
     LugaresComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    NewlugarComponent
   ],
   imports: [
     BrowserModule,
