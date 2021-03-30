@@ -12,6 +12,95 @@ main {
 }
 
 
+
+
+
+
+
+h1 {
+    font-size: 50px;
+    color: white;
+    text-align: left;
+    padding-top: 400px;
+    padding-left: 100px;
+    text-shadow: rgb(92, 92, 92);
+    position: relative;
+    text-shadow: 2px 2px 8px rgb(54, 54, 54);
+
+}
+
+h2 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+}
+
+
+h3 {
+    font-size: 22px;
+}
+
+img {
+    border-radius: 10px;
+}
+
+.columna {
+    margin: 20px auto;
+}
+
+.registro {
+    margin: 50px auto;
+    /* border-radius: 20px; */
+    height: auto;
+    z-index: -1;
+}
+
+.registro a{
+    text-decoration: none;
+    color:white;
+
+}
+
+.registro a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.registro buton a:hover {
+    color: black !important;
+}
+
+.registro1 {
+   color: white;
+    background-color: black;
+    border-radius: 10px;
+    padding: 40px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.registro2 img {
+  
+     border-radius: 0px 20px 20px 0px;
+ }
+
+ .registro1 h3 {
+     font-size: 45px;
+     font-weight:700;
+     color: white;
+     margin-top: 50px;
+     
+ }
+
+ .registro1 p {
+    font-size: 25px;
+    
+    color: white;
+        
+}
+
+
 @media (max-width: 400px) {
     .hero {
         background-image: url("../../../assets/images/hero-doggify.png");
@@ -23,6 +112,22 @@ main {
         height: auto;
         z-index: -1;
     }
+
+    .registro1 {
+       
+       border-radius: 20px 20px 0px 0px;
+     }
+
+     .registro1 h3 {
+        font-size: 30px;
+        margin-top: 0px;
+     }
+     
+     .registro2 img {
+         
+        border-radius: 0px 0px 20px 20px;
+      }
+
   }
 
 @media (min-width: 401px) {
@@ -36,6 +141,17 @@ main {
         height: auto;
         z-index: -1;
     }
+
+    .registro1 {
+        padding-top: 0px;
+        border-radius: 20px 20px 0px 0px;
+      }
+      
+      .registro2 img {
+          
+         border-radius: 0px 0px 20px 20px;
+       }
+
   }
 
   @media (min-width: 769px) {
@@ -50,17 +166,59 @@ main {
         z-index: -1;
     }
 
+    .registro1 {
+       
+        border-radius: 20px 0px 0px 20px;
+      }
+ 
+      .registro1 h3 {
+         font-size: 25px;
+         margin-top: 20px;
+      }
+
+      .registro1 p {
+        font-size: 18px;
+        margin-top: 0px;
+     }
+      
+      .registro2 img {
+          
+         border-radius: 0px 20px 20px 0px;
+         height: auto;
+       }
+
   }
 
 
-h1 {
-    font-size: 50px;
-    color: white;
-    text-align: left;
-    padding-top: 400px;
-    padding-left: 100px;
-    text-shadow: rgb(92, 92, 92);
-    position: relative;
-    text-shadow: 2px 2px 8px rgb(54, 54, 54);
+  @media (min-width: 992px) {
 
-}
+    .registro1 {
+        color: white;
+         background-color: black;
+         border-radius: 10px;
+         padding: 40px;
+         border-radius: 20px 0px 0px 20px;
+     }
+     
+     .registro2 img {
+       
+          border-radius: 0px 20px 20px 0px;
+      }
+     
+      .registro1 h3 {
+          font-size: 45px;
+          font-weight:700;
+          color: white;
+          margin-top: 20px;
+          
+      }
+     
+      .registro1 p {
+         font-size: 25px;
+         
+         color: white;
+             
+     }
+
+    }
+   
