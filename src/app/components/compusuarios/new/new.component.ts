@@ -84,7 +84,6 @@ export class NewComponent implements OnInit {
     if (passwordValue === passwordRepeatValue) {
       return null;
 
-
     } else {
       return { passwordvalidator: true };
     }
@@ -97,19 +96,35 @@ export class NewComponent implements OnInit {
   // Método para crear el usuario
 
   async onSubmit() {
-    console.log(this.formNewUser.value);
-    const response = await this.usuariosService.insert(this.formNewUser.value);
-    console.log(response);
-    Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Usuario creado correctamente',
-      showConfirmButton: false,
-      timer: 2000
-    })
-    setTimeout(() => this.router.navigate(['/user']), 2500);
+    console.log(this.formNewUser.valid)
+    if (this.formNewUser.valid) {
+
+      const response = await this.usuariosService.insert(this.formNewUser.value);
+      console.log(response);
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Usuario creado correctamente',
+        showConfirmButton: false,
+        timer: 2000
+      })
+      setTimeout(() => this.router.navigate(['/user']), 2500);
+    }
+    else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Usuario no creado',
+        text: 'Verifica los datos',
+      })
+    }
 
   }
+
+
+
+
+
+
 
 }
 

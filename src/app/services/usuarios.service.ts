@@ -69,7 +69,7 @@ export class UsuariosService {
 
   editUsuariobyId(formValues): Promise<Usuario> {
 
-    return this.httpClient.put<Usuario>(`${this.baseUrl}/usuarios/${pId}`, formValues).toPromise();
+    return this.httpClient.put<Usuario>(`${this.baseUrl}/usuarios/edit`, formValues, this.createHeaders()).toPromise();
 
   }
 

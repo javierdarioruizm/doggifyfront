@@ -78,17 +78,66 @@ export class FavoritosComponent implements OnInit {
         console.log('NUM PÁGINAS DE FAVORITOS LENGTH:', this.arrayPaginas.length)
 
         if (this.arrayPaginas.length == 0) {
+
           console.log('NO FAVORITOS', this.arrayPaginas.length)
+
+
           Swal.fire({
-            // position: 'center',
-            icon: 'info',
             title: 'No has guardado ningún favorito',
-            showConfirmButton: false,
-            timer: 1500
+            text: "¿Quieres descubrir nuevos lugares?",
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonText: 'No',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.router.navigate(['/lugares']);
+            } else {
+              this.router.navigate(['/user']);
+            }
           })
-          this.router.navigate(['user']);
+
+
+
+
+
+
+          // Swal.fire({
+          //   // position: 'center',
+          //   icon: 'info',
+          //   title: 'No has guardado ningún favorito',
+          //   showConfirmButton: false,
+          //   timer: 1500
+          // })
+          // this.router.navigate(['user']);
+
+
+
+
         }
+
+
       })
+
+
+    // Swal.fire({
+    //   title: 'No has guardado ningún favorito',
+    //   text: "¿Quieres descubrir nuevos lugares?",
+    //   icon: 'info',
+    //   showCancelButton: true,
+    //   confirmButtonColor: '#3085d6',
+    //   cancelButtonText: 'No',
+    //   cancelButtonColor: '#d33',
+    //   confirmButtonText: 'Si'
+    // }).then((result) => {
+    //   if (result.isConfirmed) {
+    //     this.router.navigate(['/lugares']);
+    //   } else {
+    //     this.router.navigate(['/user']);
+    //   }
+    // })
 
 
     // Método para mostrar todos los favoritos por página al inicio

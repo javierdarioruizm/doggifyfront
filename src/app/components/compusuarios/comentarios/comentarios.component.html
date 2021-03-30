@@ -1,29 +1,18 @@
 <div class="container">
     <div class="col-10 col-md-8 col-lg-6 col-xl-5 comentario">
         <div class="lugar">
-            <div class="row">
-                <div class="col-4">
-                    <!-- <img [src]="'http://localhost:3000/images/'+listaImagenes[0]"> -->
-                    <!-- [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+listaImagenes[imagenActual]+')'}" -->
-                </div>
-                <div class="col-8 titulo">
-                    <h2> {{ lugar?.nombre }}</h2>
-                    <p> {{ lugar?.direccion }}, {{ lugar?.codigo_postal }} {{ lugar?.poblacion }}</p>
-                </div>
+
+            <div class="titulo">
+                <p>Valora a </p>
+                <h4> {{ lugar?.nombre }}</h4>
 
             </div>
+
+
         </div>
 
 
-        <!-- <div class="galeria" *ngIf="listaImagenes && listaImagenes.length > 0"
-        [ngStyle]="{backgroundImage: 'url(http://localhost:3000/images/'+listaImagenes[0]+')'}">
-         <fa-icon [icon]="faChevronLeft" class="flechaizquierda" (click)="onClick(false)"></fa-icon>
-        <fa-icon [icon]="faChevronRight" class="flechaderecha" (click)="onClick(true)"></fa-icon> 
-
-
-</div> -->
-
-        <h3>Tu experiencia es muy valiosa</h3>
+        <h4>Tu experiencia es muy valiosa</h4>
 
 
 
@@ -43,6 +32,7 @@
                     <option>4</option>
                     <option>5</option>
                 </select>
+
             </div>
 
             <div class="form-group">

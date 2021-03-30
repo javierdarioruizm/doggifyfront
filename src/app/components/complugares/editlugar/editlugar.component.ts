@@ -39,7 +39,7 @@ export class EditlugarComponent implements OnInit {
       this.lugar = arrLugar;
       console.log(this.lugar)
       this.edicionLugares = new FormGroup({
-
+        id: new FormControl(this.lugar.id),
         nombre: new FormControl(this.lugar.nombre),
         direccion: new FormControl(this.lugar.direccion),
         poblacion: new FormControl(this.lugar.poblacion),
@@ -61,14 +61,21 @@ export class EditlugarComponent implements OnInit {
 
     });
 
+    console.log('datosFormulario', this.edicionLugares.value)
 
   }
 
   onSubmit() {
     // Creación del objeto donde incluimos todos los campos del formulario y además la imagen
+
+
+
     let fd = new FormData();
 
-    fd.append('imagenes', this.files[0]);
+    if (this.files && this.files.length > 0) {
+      fd.append('imagenes', this.files[0])
+    }
+    fd.append('id', this.edicionLugares.value.id);
     fd.append('nombre', this.edicionLugares.value.nombre);
     fd.append('direccion', this.edicionLugares.value.direccion);
     fd.append('poblacion', this.edicionLugares.value.poblacion);
@@ -86,8 +93,16 @@ export class EditlugarComponent implements OnInit {
 
 
     // Delegamos el envío del formulario en el servicio
-    this.lugaresService.create(fd).then(result => {
-      this.router.navigate(['']);
+
+    this.lugaresService.editLugarbyId(this.edicionLugares.value).then(result => {
+      Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Datos actualizados',
+        showConfirmButton: false,
+        timer: 2000
+      })
+      this.router.navigate(['/lugares/', this.edicionLugares.value.id]);
     })
   }
 

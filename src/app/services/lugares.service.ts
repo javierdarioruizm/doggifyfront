@@ -101,6 +101,14 @@ export class LugaresService {
   }
 
 
+  // Método para editar los datos de un lugar
+
+  editLugarbyId(fd: FormData): Promise<Lugar> {
+
+    return this.httpClient.put<Lugar>(`${this.baseUrl}/lugares/edit`, fd, this.createHeaders()).toPromise();
+
+  }
+
   // Método para obtener el número de páginas de las valoraciones de cada lugar
 
   getNumPagesLugar(pIdLugar): Promise<any> {

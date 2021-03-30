@@ -96,6 +96,7 @@ export class PerfilComponent implements OnInit {
       text: "¡No podrás revertir esta acción!",
       icon: 'warning',
       showCancelButton: true,
+      cancelButtonText: 'Cancelar',
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
       confirmButtonText: '¡Si, borrála!'

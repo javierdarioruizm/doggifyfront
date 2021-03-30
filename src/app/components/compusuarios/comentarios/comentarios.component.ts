@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -29,6 +29,7 @@ export class ComentariosComponent implements OnInit {
   ) {
 
     this.formComentarios = new FormGroup({
+
 
       valoracion: new FormControl(),
       comentario: new FormControl(),

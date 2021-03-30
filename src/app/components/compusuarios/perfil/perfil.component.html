@@ -3,10 +3,6 @@
     <h1>Mi perfil</h1>
 
     <div class="col-12 col-md-8 col-lg-6 col-xl-5 perfil">
-        <div class="foto">
-            <i class="fas fa-user-circle"></i>
-        </div>
-
 
         <form class="formulario" [formGroup]="formEditUser" (ngSubmit)="onSubmit()">
             <div class="row">
@@ -56,11 +52,13 @@
 
 
             <input type="submit" value="Guardar" class="btn btn-primary btn-block">
-        </form>
 
+
+        </form>
         <div class="eliminar">
             <button class="btn btn-danger" (click)="Borrar()">Borrar cuenta</button>
         </div>
+
     </div>
 
 </div>
