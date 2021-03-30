@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   faTimes = faTimes;
   faBars = faBars;
   faUserCircle = faUserCircle;
+  faSearch = faSearch;
   menu: boolean;
 
 

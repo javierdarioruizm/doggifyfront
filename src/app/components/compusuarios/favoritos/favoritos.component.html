@@ -1,10 +1,10 @@
 <div class="row contenedor">
 
     <div class="col-12 col-sm-12 col-md-6 lugares">
-
+        <h1>Tus lugares favoritos</h1>
         <div class="buscador">
             <select (change)="onChange($event)">
-                <option value="todas">Todos</option>
+                <option value="todas">Todas las categorías</option>
                 <option *ngFor="let categoriaelegida of listaCategorias" [value]="categoriaelegida.categoria">
                     {{categoriaelegida.categoria}}</option>
             </select>

@@ -27,7 +27,10 @@
                 </li>
                 <li class="nav-item">
                     <a (click)="onClickEnlace()" class="nav-link" [routerLink]="['/lugares']" data-toggle="collapse"
-                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">Lugares</a>
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                        <fa-icon [icon]="faSearch" class="fa icon"></fa-icon>
+                        Lugares
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Categorías</a>

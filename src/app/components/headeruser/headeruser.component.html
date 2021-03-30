@@ -20,11 +20,16 @@
                 </li>
                 <li class="nav-item">
                     <a (click)="onClickLugares()" class="nav-link" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false">Lugares</a>
+                        aria-controls="navbarNav" aria-expanded="false">
+                        <fa-icon [icon]="faSearch" class="fa icon"></fa-icon>
+                        Lugares
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false">Categorías</a>
+                    <a class="nav-link" (click)="onClickFavoritos()" href="#" data-toggle="collapse"
+                        data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                        <fa-icon [icon]="farHeart" class="fa icon"></fa-icon> Favoritos
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#" data-toggle="collapse" data-target="#navbarNav"

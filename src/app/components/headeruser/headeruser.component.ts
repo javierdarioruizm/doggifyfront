@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-headeruser',
@@ -20,6 +22,8 @@ export class HeaderuserComponent implements OnInit {
   faBars = faBars;
   faUserCircle = faUserCircle;
   menu: boolean;
+  faSearch = faSearch;
+  farHeart = farHeart;
 
 
   constructor(private router: Router) {
@@ -64,6 +68,20 @@ export class HeaderuserComponent implements OnInit {
       this.menu = !this.menu
     }
     setTimeout(() => this.router.navigate(['/lugares']), 50);
+    setTimeout(() => window.location.reload(), 50);
+
+  }
+
+  onClickFavoritos() {
+    if (this.icono === 'clicked') {
+      this.icono = 'unclicked';
+      this.menu = !this.menu
+
+    } else {
+      this.icono = 'clicked';
+      this.menu = !this.menu
+    }
+    setTimeout(() => this.router.navigate(['/favoritos']), 50);
     setTimeout(() => window.location.reload(), 50);
 
   }

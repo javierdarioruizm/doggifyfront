@@ -4,6 +4,13 @@
             
 }  
 
+h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
 .lugares {
     background-color: white;
     padding: 0px;
