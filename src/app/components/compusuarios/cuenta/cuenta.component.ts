@@ -3,12 +3,13 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
-
+import { faSlidersH } from '@fortawesome/free-solid-svg-icons';
+import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
-import { Usuario } from 'src/app/interfaces/usarios.interface';
+import { Usuario } from 'src/app/interfaces/usuarios.interface';
 
 declare var Swal;
 
@@ -24,6 +25,8 @@ export class CuentaComponent implements OnInit {
   faHeart = faHeart;
   farHeart = farHeart;
   faUserCircle = faUserCircle;
+  faSlidersH = faSlidersH;
+  faUserAlt = faUserAlt;
 
   usuario: Usuario;
 
@@ -68,7 +71,7 @@ export class CuentaComponent implements OnInit {
 
   onClickMiPerfil() {
     setTimeout(() => this.router.navigate(['perfil']), 100);
-    setTimeout(() => window.location.reload(), 100);
+    // setTimeout(() => window.location.reload(), 100);
   }
 
   onClickFavoritos() {

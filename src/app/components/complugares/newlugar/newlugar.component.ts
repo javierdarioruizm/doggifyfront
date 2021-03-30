@@ -3,6 +3,8 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { LugaresService } from 'src/app/services/lugares.service';
 
+declare var Swal;
+
 @Component({
   selector: 'app-newlugar',
   templateUrl: './newlugar.component.html',
@@ -83,3 +85,5 @@ export class NewlugarComponent implements OnInit {
   onChange($event) {
     this.files = $event.target.files;
   }
+
+}

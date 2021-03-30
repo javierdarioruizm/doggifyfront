@@ -3,6 +3,7 @@ import { Lugar } from 'src/app/interfaces/lugares.interface';
 import { LugaresService } from 'src/app/services/lugares.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -22,6 +23,7 @@ export class LugaresComponent implements OnInit {
   favorito: number;
   faStar = faStar;
   farStar = farStar;
+  farHeart = farHeart;
   numeroLugares: number;
 
   listaImagenes: any;
@@ -78,9 +80,9 @@ export class LugaresComponent implements OnInit {
 
     const response = await this.lugaresService.getAllByPage(1);
     const responsefavoritos = await this.favoritosService.getFavoritosByUser();
-
+    console.log(response)
     this.lugares = response;
-    this.favoritos = responsefavoritos;
+    this.favoritos = responsefavoritos || [];
     this.numeroLugares = this.lugares.length;
     this.paginaseleccionada = 1;
     for (let lugar of this.lugares) {

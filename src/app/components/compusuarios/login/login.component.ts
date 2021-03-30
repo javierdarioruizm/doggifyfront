@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -25,8 +25,10 @@ export class LoginComponent implements OnInit {
 
     this.formLogin = new FormGroup({
 
-      email: new FormControl(),
-      password: new FormControl()
+      // email: new FormControl(),
+      // password: new FormControl()
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required])
 
     });
 
@@ -61,13 +63,13 @@ export class LoginComponent implements OnInit {
         if (response.error) {
           console.log('error_login', response.error)
           setTimeout(() => this.errorMessage = response.error, 300);
-          Swal.fire({
-            position: 'top-center',
-            icon: 'success',
-            title: 'Tu email y/o contraseña son incorrectos',
-            showConfirmButton: true,
 
+          Swal.fire({
+            icon: 'error',
+            title: 'Acceso denegado',
+            text: 'Tu email y/o contraseña son incorrectos',
           })
+
         } else {
           console.log(response.token)
           localStorage.setItem('tokendoggify', response.token);

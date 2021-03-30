@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Usuario } from '../interfaces/usarios.interface';
+import { Usuario } from '../interfaces/usuarios.interface';
 import { Valoracion } from '../interfaces/valoraciones.interface';
 
 @Injectable({
@@ -67,9 +67,9 @@ export class UsuariosService {
 
   // Método para editar los datos de un usuario
 
-  editUsuariobyId(pId): Promise<Usuario> {
+  editUsuariobyId(formValues): Promise<Usuario> {
 
-    return this.httpClient.put<Usuario>(`${this.baseUrl}/usuarios/${pId}`, pId).toPromise();
+    return this.httpClient.put<Usuario>(`${this.baseUrl}/usuarios/${pId}`, formValues).toPromise();
 
   }
 

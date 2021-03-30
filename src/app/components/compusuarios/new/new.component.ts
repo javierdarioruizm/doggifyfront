@@ -1,7 +1,8 @@
 import { Component, ElementRef, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsuariosService } from 'src/app/services/usuarios.service';
+import { debounceTime } from 'rxjs/operators';
 
 declare var Swal;
 
@@ -13,6 +14,7 @@ declare var Swal;
 export class NewComponent implements OnInit {
 
   formNewUser: FormGroup;
+  formCorrecto: boolean;
 
   constructor(
     private usuariosService: UsuariosService,
@@ -20,26 +22,33 @@ export class NewComponent implements OnInit {
     private elementRef: ElementRef
   ) {
 
+
+
     this.formNewUser = new FormGroup({
 
-      nombre: new FormControl(),
-      // apellidos: new FormControl(),
-      // direccion: new FormControl(),
-      // poblacion: new FormControl(),
-      // codigo_postal: new FormControl(),
-      // provincia: new FormControl(),
-      // pais: new FormControl(),
-      email: new FormControl(),
-      password: new FormControl()
-      // telefono: new FormControl(),
-      // foto: new FormControl(),
+      nombre: new FormControl('', [
+        Validators.required]),
+      email: new FormControl('', [
+        Validators.pattern(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,4}$/)
+      ]),
+      password: new FormControl('', [
+        Validators.required]),
 
+      password_repeat: new FormControl(''),
 
-    });
+      condiciones: new FormControl('', [
+        Validators.required]),
+
+    }, [this.passwordValidator
+    ]);
+
   }
 
   ngOnInit(): void {
-
+    const emailControl = this.formNewUser.get('email');
+    emailControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
+      console.log(value);
+    });
   }
 
   ngAfterViewInit() {
@@ -58,6 +67,35 @@ export class NewComponent implements OnInit {
   }
 
 
+  // Función para validar
+
+  checkValidator(controlName, validatorName) {
+
+    return this.formNewUser.get(controlName).hasError(validatorName) && this.formNewUser.get(controlName).touched;
+
+  }
+
+  // Validador para la password
+
+  passwordValidator(form: FormGroup) {
+    const passwordValue = form.get('password').value;
+    const passwordRepeatValue = form.get('password_repeat').value;
+
+    if (passwordValue === passwordRepeatValue) {
+      return null;
+
+
+    } else {
+      return { passwordvalidator: true };
+    }
+
+
+  }
+
+
+
+  // Método para crear el usuario
+
   async onSubmit() {
     console.log(this.formNewUser.value);
     const response = await this.usuariosService.insert(this.formNewUser.value);
@@ -70,6 +108,7 @@ export class NewComponent implements OnInit {
       timer: 2000
     })
     setTimeout(() => this.router.navigate(['/user']), 2500);
+
   }
 
 }

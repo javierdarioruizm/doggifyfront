@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Usuario } from 'src/app/interfaces/usuarios.interface';
@@ -15,12 +15,17 @@ export class PerfilComponent implements OnInit {
 
   formEditUser: FormGroup;
   usuario: Usuario;
+  login: boolean;
 
   constructor(
     private usuariosService: UsuariosService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
-  ) { }
+    private router: Router,
+    private elementRef: ElementRef
+  ) {
+
+    this.login = true;
+  }
 
 
   ngOnInit() {
@@ -50,6 +55,23 @@ export class PerfilComponent implements OnInit {
     });
 
   }
+
+  ngAfterViewInit() {
+    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = '#fff';
+
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundImage = 'url("../../../assets/images/fondodoggify.jpg")';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundSize = 'cover';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundRepeat = 'no-repeat';
+    this.elementRef.nativeElement.ownerDocument.body.style.backgroundPosition = '50% 50%';
+    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = 'rgb(175, 175, 175)';
+    // this.elementRef.nativeElement.ownerDocument.body.style.backgroundBlendMode = 'multiply';
+    this.elementRef.nativeElement.ownerDocument.body.style.height = 'auto';
+    this.elementRef.nativeElement.ownerDocument.body.style.zIndex = '-1';
+
+
+  }
+
+
 
   async onSubmit() {
     console.log(this.formEditUser.value);
@@ -83,15 +105,20 @@ export class PerfilComponent implements OnInit {
           .then((result) => {
             console.log(response);
           })
+
         Swal.fire(
           'Eliminada',
           'Tu cuenta ha sido borrada.',
           'success'
         )
+        localStorage.removeItem('tokendoggify');
+        setTimeout(() => this.router.navigate(['/']), 2500);
+
+        setTimeout(() => window.location.reload(), 2700);
       }
     })
 
-    setTimeout(() => this.router.navigate(['/']), 2500);
+    // setTimeout(() => this.router.navigate(['/']), 2500);
   }
 
 

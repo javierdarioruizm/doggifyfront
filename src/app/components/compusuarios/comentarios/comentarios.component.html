@@ -30,11 +30,12 @@
         <form class="formulario" [formGroup]="formComentarios" (ngSubmit)="onSubmit()">
 
             <div class="form-group">
-                <label>Tu valoración (entre 1 y 5 <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>
-                    <i class="fa fa-star" aria-hidden="true"></i>)</label>
+                <label>Tu valoración (entre 1 y 5 <fa-icon [icon]="faStar" class="star"></fa-icon>
+                    <fa-icon [icon]="faStar" class="star"></fa-icon>
+                    <fa-icon [icon]="faStar" class="star"></fa-icon>
+                    <fa-icon [icon]="faStar" class="star"></fa-icon>
+                    <fa-icon [icon]="faStar" class="star"></fa-icon>)
+                </label>
                 <select formControlName="valoracion" class="form-control" id="exampleFormControlSelect1">
                     <option>1</option>
                     <option>2</option>

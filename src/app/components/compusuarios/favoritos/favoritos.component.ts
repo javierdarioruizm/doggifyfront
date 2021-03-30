@@ -3,11 +3,14 @@ import { Lugar } from 'src/app/interfaces/lugares.interface';
 import { LugaresService } from 'src/app/services/lugares.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
 
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { FavoritosService } from 'src/app/services/favoritos.service';
+
+declare var Swal;
 
 @Component({
   selector: 'app-favoritos',
@@ -21,6 +24,7 @@ export class FavoritosComponent implements OnInit {
   favorito: boolean;
   faStar = faStar;
   farStar = farStar;
+  farHeart = farHeart;
   numeroLugares: number;
 
   listaImagenes: any;
@@ -71,6 +75,19 @@ export class FavoritosComponent implements OnInit {
           this.arrayPaginas.push(i);
         }
         console.log('NUM PÁGINAS DE FAVORITOS:', this.arrayPaginas)
+        console.log('NUM PÁGINAS DE FAVORITOS LENGTH:', this.arrayPaginas.length)
+
+        if (this.arrayPaginas.length == 0) {
+          console.log('NO FAVORITOS', this.arrayPaginas.length)
+          Swal.fire({
+            // position: 'center',
+            icon: 'info',
+            title: 'No has guardado ningún favorito',
+            showConfirmButton: false,
+            timer: 1500
+          })
+          this.router.navigate(['user']);
+        }
       })
 
 
@@ -92,6 +109,10 @@ export class FavoritosComponent implements OnInit {
       .catch(error => {
         console.log(error);
       });
+
+
+
+
 
 
     // Método para obtener todas las categorías de los favoritos

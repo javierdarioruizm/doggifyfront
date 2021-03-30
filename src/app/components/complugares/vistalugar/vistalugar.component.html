@@ -9,7 +9,8 @@
                 <div class="col-1 corazon">
                     <div title="Guardar en favoritos" class="botoncorazon" (click)="onHeart(lugar?.id)">
                         <i class="far fa-heart corazon" [ngClass]="{'fas': lugar.favorito == true}"></i>
-
+                        <fa-icon [icon]="farHeart" class="corazon" [ngClass]="{'faHeart': lugar.favorito == true}">
+                        </fa-icon>
 
                     </div>
                 </div>
