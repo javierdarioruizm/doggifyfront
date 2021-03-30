@@ -13,15 +13,15 @@
         <div class="row lugar" *ngFor="let lugar of lugares" (click)="getLugar(lugar.id)">
 
             <div class="col-12 col-sm-6  col-md-12 col-lg-6 imagen">
-                <!-- <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[0]"> -->
+                <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[0]">
 
-                <div class="galeria" *ngIf="listaImagenes && listaImagenes.length > 0">
+                <!-- <div class="galeria" *ngIf="listaImagenes && listaImagenes.length > 0">
 
                     <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[imagenActual]">
 
                     <fa-icon [icon]="faChevronLeft" class="flechaizquierda" (click)="onClick(false)"></fa-icon>
                     <fa-icon [icon]="faChevronRight" class="flechaderecha" (click)="onClick(true)"></fa-icon>
-                </div>
+                </div> -->
 
             </div>
             <div class="col-10 col-sm-5  col-md-10 col-lg-5 texto">
@@ -58,8 +58,10 @@
             <div class="col-1 corazon">
 
                 <div title="Guardar en favoritos" class="botoncorazon" (click)="onHeart(lugar?.id)">
-                    <i class="far fa-heart corazon" [ngClass]="{'fas': lugar?.favorito}"></i>
-                    <fa-icon [icon]="farHeart" class="corazon" [ngClass]="{'faHeart': lugar?.favorito}">
+
+                    <fa-icon [icon]="farHeart" class="corazon" *ngIf="lugar.favorito == false">
+                    </fa-icon>
+                    <fa-icon [icon]="faHeart" class="corazon" *ngIf=" lugar.favorito == true">
                     </fa-icon>
                 </div>
 

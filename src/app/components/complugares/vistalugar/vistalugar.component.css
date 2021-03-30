@@ -180,7 +180,7 @@ h3{
     width: 50px;
     text-align:center;
     cursor:pointer;
-   
+    
   
 }
 
@@ -192,8 +192,9 @@ h3{
 
 .corazon{
    position: absolute;
+  
    right: 12px;
-   top: 12px;    
+   top: 7px;    
     color:red;
     font-size: 25px;
     z-index: 10;

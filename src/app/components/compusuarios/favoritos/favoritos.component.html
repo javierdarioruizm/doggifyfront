@@ -50,8 +50,7 @@
                 <!-- <app-corazon></app-corazon> -->
 
                 <div title="Guardar en favoritos" class="botoncorazon" (click)="onHeart(lugar?.id)">
-                    <i class="fas fa-heart corazon" [ngClass]="{'far': (corazon === 'clicked')}"></i>
-                    <fa-icon [icon]="farHeart" class="corazon" [ngClass]="{'faHeart': lugar.favorito == true}">
+                    <fa-icon [icon]="faHeart" class="corazon">
                     </fa-icon>
                 </div>
 

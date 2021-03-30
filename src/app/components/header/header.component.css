@@ -107,10 +107,30 @@ img {
     background-color: transparent;
     border: 1px solid transparent;
     border-radius: .25rem;
-    z-index: 99999;
+    /* z-index: 99999; */
     color: #2c1366;
     border-color: none;
-    
+    z-index:9999;
+}
+
+
+button {
+
+    z-index:1000;
+}
+
+faBars {
+    z-index:0;
+}
+faTimes {
+    z-index:0;
+}
+
+.iconomenu {
+
+   
+    z-index:0;
+
 }
 
 .icono {
@@ -123,11 +143,12 @@ img {
 
  .navbar-toggler-icon {
     background-image: url(../../../assets/images/bars-solid.svg);
-  
+    z-index:0;
 } 
 
 .aspa {
     background-image: url(../../../assets/images/times-solid.svg);
+    z-index: 0;
 }
 
 

@@ -11,10 +11,13 @@
         <button (click)="onClick()" class="navbar-toggler" type="button" aria-label="Toggle navigation"
             data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
 
-            <fa-icon [icon]="faBars" [ngClass]="{ 'faTimes': (icono === 'clicked')}"></fa-icon>
+            <!-- <fa-icon [icon]="faBars" class="iconomenu" *ngIf="icono !== 'clicked'"></fa-icon>
+            <fa-icon [icon]="faTimes" class="iconomenu" *ngIf="icono === 'clicked'"></fa-icon> -->
+            <fa-icon [icon]="faBars" class="faBars" [ngClass]="{ faTimes :(icono === 'unclicked')}"></fa-icon>
+
         </button>
 
-        <!-- <div class="navbar-collapse collapse" id="navbarNav" [ngClass]="{show: menu}"> -->
+
 
         <div class="navbar-collapse collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">

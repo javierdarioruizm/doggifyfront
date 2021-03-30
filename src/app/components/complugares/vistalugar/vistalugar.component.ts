@@ -36,7 +36,7 @@ export class VistalugarComponent implements OnInit {
   listaImagenes: [];
   imagenActual: number;
   corazon: string;
-  favorito: boolean;
+
 
   constructor(
     private lugaresService: LugaresService,
@@ -61,7 +61,7 @@ export class VistalugarComponent implements OnInit {
       this.listaImagenes = this.lugar.arrimagenes;
     });
 
-    // // Método para recuperar los favoritos del usuario
+    // Método para recuperar los favoritos del usuario
 
 
     this.favoritosService.getFavoritosByUser()
@@ -77,23 +77,12 @@ export class VistalugarComponent implements OnInit {
             this.lugar.favorito = true;
           }
           else {
+            console.log('NoEncuentra', this.lugar.nombre)
             this.lugar.favorito = false;
+
           }
 
 
-          // console.log(favorito.id)
-          // if (this.lugar.id == favorito.id) {
-          //   this.favorito = true;
-          //   this.corazon = 'clicked';
-          //   this.lugar.favorito = true;
-          //   console.log('favorito', this.favorito)
-          //   console.log('lugar.favorito', this.lugar.favorito)
-          // }
-          // else {
-          //   this.corazon = 'unclicked';
-          //   this.favorito = false;
-          //   this.lugar.favorito = false;
-          // }
 
         }
       })
@@ -101,23 +90,8 @@ export class VistalugarComponent implements OnInit {
         console.log(error);
       });
 
-
-
-    // for (let lugar of this.lugares) {
-
-    //   const encuentra = this.favoritos.find(favorito => favorito.id === lugar.id);
-    //   if (encuentra) {
-    //     console.log('encuentra', lugar.nombre)
-    //     lugar.favorito = true;
-    //   }
-    // }
-
-
-
-
-
-
   }
+
 
   // Método para cambiar las imágenes de la galería
 
@@ -142,18 +116,13 @@ export class VistalugarComponent implements OnInit {
 
     if (localStorage.getItem('tokendoggify')) {
       console.log('elegidoAlEntrar', pId)
-      console.log('favorito', this.favorito)
-      console.log('corazonAntes', this.corazon)
       console.log('lugar.favorito', this.lugar.favorito)
       if (this.lugar.favorito == false) {
 
         this.favoritosService.addFavoritosById(pId)
           .then(response => {
-
             console.log(response);
-            this.corazon = 'clicked';
-            this.favorito = true;
-            console.log('corazonAñadir', this.corazon); console.log('favorito', this.favorito)
+            this.lugar.favorito = true;
             console.log('lugar.favorito', this.lugar.favorito)
           })
           .catch(error => {
@@ -167,10 +136,7 @@ export class VistalugarComponent implements OnInit {
         this.favoritosService.deleteFavoritosById(pId)
           .then(response => {
             console.log(response);
-            this.corazon = 'unclicked';
-            this.favorito = false;
             this.lugar.favorito = false;
-            console.log('corazonBorrado', this.corazon); console.log('favorito', this.favorito)
             console.log('lugar.favorito', this.lugar.favorito)
           })
           .catch(error => {

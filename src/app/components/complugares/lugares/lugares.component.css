@@ -6,7 +6,7 @@
 }  
 
 .lugares {
-    background-color: white;
+    
     padding: 0px;
     margin: 0px;
        
@@ -29,6 +29,9 @@
     z-index: 0;
 }
 
+.lugar:hover {
+    background-color: rgb(245, 245, 245);
+}
 
 .lugar .imagen {
     
@@ -43,7 +46,7 @@
 
 
 .lugar .texto {
-    background-color: white;
+    color: black;
    
 }
 
@@ -182,21 +185,21 @@ agm-map {
 .botoncorazon {
     padding-top: 5px;
     margin: 0px;    
-    background-color: white;
+    /* background-color: white; */
     border-radius: 50px;
     height: 50px;
     width: 50px;
     text-align:center;
-    cursor:pointer;
+    /* cursor:pointer; */
     
   
 }
 
-.botoncorazon:hover {
+/* .botoncorazon:hover {
        
     background-color: rgb(245, 244, 244);
    
-}
+} */
 
 .corazon{
     padding-top: 5px;

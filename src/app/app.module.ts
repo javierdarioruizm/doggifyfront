@@ -36,6 +36,7 @@ import { HeaderuserComponent } from './components/headeruser/headeruser.componen
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import { HeaderuserComponent } from './components/headeruser/headeruser.componen
     CuentaComponent,
     FavoritosComponent,
     ComentariosComponent,
+
 
   ],
 

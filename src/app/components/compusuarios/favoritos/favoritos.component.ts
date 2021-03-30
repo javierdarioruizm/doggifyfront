@@ -3,6 +3,7 @@ import { Lugar } from 'src/app/interfaces/lugares.interface';
 import { LugaresService } from 'src/app/services/lugares.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -24,6 +25,7 @@ export class FavoritosComponent implements OnInit {
   favorito: boolean;
   faStar = faStar;
   farStar = farStar;
+  faHeart = faHeart;
   farHeart = farHeart;
   numeroLugares: number;
 
@@ -100,10 +102,6 @@ export class FavoritosComponent implements OnInit {
           })
 
 
-
-
-
-
           // Swal.fire({
           //   // position: 'center',
           //   icon: 'info',
@@ -114,30 +112,13 @@ export class FavoritosComponent implements OnInit {
           // this.router.navigate(['user']);
 
 
-
-
         }
 
 
       })
 
 
-    // Swal.fire({
-    //   title: 'No has guardado ningún favorito',
-    //   text: "¿Quieres descubrir nuevos lugares?",
-    //   icon: 'info',
-    //   showCancelButton: true,
-    //   confirmButtonColor: '#3085d6',
-    //   cancelButtonText: 'No',
-    //   cancelButtonColor: '#d33',
-    //   confirmButtonText: 'Si'
-    // }).then((result) => {
-    //   if (result.isConfirmed) {
-    //     this.router.navigate(['/lugares']);
-    //   } else {
-    //     this.router.navigate(['/user']);
-    //   }
-    // })
+
 
 
     // Método para mostrar todos los favoritos por página al inicio

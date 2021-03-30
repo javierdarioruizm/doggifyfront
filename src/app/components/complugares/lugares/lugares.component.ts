@@ -3,6 +3,7 @@ import { Lugar } from 'src/app/interfaces/lugares.interface';
 import { LugaresService } from 'src/app/services/lugares.service';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as farHeart } from '@fortawesome/free-regular-svg-icons';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -23,6 +24,7 @@ export class LugaresComponent implements OnInit {
   favorito: number;
   faStar = faStar;
   farStar = farStar;
+  faHeart = faHeart;
   farHeart = farHeart;
   numeroLugares: number;
 
@@ -62,7 +64,7 @@ export class LugaresComponent implements OnInit {
   }
 
 
-  async ngOnInit() {
+  ngOnInit() {
 
     // Método para obtener todos las páginas y mostrar todos lugares
 
@@ -72,30 +74,52 @@ export class LugaresComponent implements OnInit {
         for (let i = 1; i <= numeroPaginas; i++) {
           this.arrayPaginas.push(i);
         }
-
       })
+      .catch(error => {
+        console.log(error);
+      });
+
+
+    // Método para mostrar los lugares por página
+
+    this.lugaresService.getAllByPage(1)
+      .then(response => {
+        this.lugares = response;
+        this.numeroLugares = this.lugares.length;
+        this.paginaseleccionada = 1;
+        for (let lugar of this.lugares) {
+          lugar.arrimagenes = lugar.imagenes.split(",");
+          this.listaImagenes = lugar.arrimagenes;
+        }
+      })
+      .catch(error => {
+        console.log(error);
+      });
 
 
     // Método para mostrar todos los lugares por página al inicio
 
-    const response = await this.lugaresService.getAllByPage(1);
-    const responsefavoritos = await this.favoritosService.getFavoritosByUser();
-    console.log(response)
-    this.lugares = response;
-    this.favoritos = responsefavoritos || [];
-    this.numeroLugares = this.lugares.length;
-    this.paginaseleccionada = 1;
-    for (let lugar of this.lugares) {
-      console.log(lugar.imagenes)
-      lugar.arrimagenes = lugar.imagenes.split(",");
-      console.log(lugar.arrimagenes)
-      this.listaImagenes = lugar.arrimagenes;
-      const encuentra = this.favoritos.find(favorito => favorito.id === lugar.id);
-      if (encuentra) {
-        console.log('encuentra', lugar.nombre)
-        lugar.favorito = true;
-      }
-    }
+    // const response = await this.lugaresService.getAllByPage(1);
+    // const responsefavoritos = await this.favoritosService.getFavoritosByUser();
+    // console.log(response)
+    // this.lugares = response;
+    // this.favoritos = responsefavoritos || [];
+    // this.numeroLugares = this.lugares.length;
+    // this.paginaseleccionada = 1;
+    // for (let lugar of this.lugares) {
+    //   console.log(lugar.imagenes)
+    //   lugar.arrimagenes = lugar.imagenes.split(",");
+    //   console.log(lugar.arrimagenes)
+    //   this.listaImagenes = lugar.arrimagenes;
+    //   const encuentra = this.favoritos.find(favorito => favorito.id === lugar.id);
+    //   if (encuentra) {
+    //     console.log('encuentra', lugar.nombre)
+    //     lugar.favorito = true;
+    //   }
+    //   else {
+    //     lugar.favorito = false;
+    //   }
+    // }
 
 
     // Método para obtener todas las categorías

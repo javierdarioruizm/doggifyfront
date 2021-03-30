@@ -61,13 +61,10 @@ export class EditlugarComponent implements OnInit {
 
     });
 
-    console.log('datosFormulario', this.edicionLugares.value)
 
   }
 
   onSubmit() {
-    // Creación del objeto donde incluimos todos los campos del formulario y además la imagen
-
 
 
     let fd = new FormData();
