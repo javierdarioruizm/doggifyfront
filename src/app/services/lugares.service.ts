@@ -17,7 +17,8 @@ export class LugaresService {
 
   constructor(private httpClient: HttpClient) {
 
-    this.baseUrl = 'http://localhost:3000/api';
+    // this.baseUrl = 'http://localhost:3000/api';
+    this.baseUrl = 'https://doggifyback.herokuapp.com/api';
     this.listaCategorias = [];
   }
 

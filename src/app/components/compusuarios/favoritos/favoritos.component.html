@@ -13,7 +13,7 @@
         <div class="row lugar" *ngFor="let lugar of lugares" (click)="getLugar(lugar.id)">
 
             <div class="col-12 col-sm-6  col-md-12 col-lg-6 imagen">
-                <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[0]">
+                <img [src]="'https://doggifyback.herokuapp.com/images/'+lugar.arrimagenes[0]">
             </div>
             <div class="col-10 col-sm-5  col-md-10 col-lg-5 texto">
                 <h3> {{ lugar.nombre }} </h3>
@@ -79,7 +79,8 @@
                 <agm-snazzy-info-window [closeWhenOthersOpen]="true">
                     <ng-template>
                         <a [routerLink]="['/lugares', lugar.id]">
-                            <img [src]="'http://localhost:3000/images/'+lugar.arrimagenes[0]" class="imagenmapa">
+                            <img [src]="'https://doggifyback.herokuapp.com/images/'+lugar.arrimagenes[0]"
+                                class="imagenmapa">
                             <p>{{ lugar.nombre }}</p>
                         </a>
                     </ng-template>

@@ -21,7 +21,7 @@
 
             <div class="galeria" *ngIf="listaImagenes && listaImagenes.length > 0">
 
-                <img [src]="'http://localhost:3000/images/'+listaImagenes[imagenActual]">
+                <img [src]="'https://doggifyback.herokuapp.com/images/'+listaImagenes[imagenActual]">
 
                 <fa-icon [icon]="faChevronLeft" class="flechaizquierda" (click)="onClick(false)"></fa-icon>
                 <fa-icon [icon]="faChevronRight" class="flechaderecha" (click)="onClick(true)"></fa-icon>
